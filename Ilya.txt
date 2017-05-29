@@ -30,10 +30,20 @@ def  inf  ( url ):
 l = ''
 for i in range(10):
     l.append(input())
+<<<<<<< HEAD
     def(l)
+=======
+    inf(l)
+>>>>>>> 1b5ab69001ce3ff0a2f76e01953b2b206e90d792
 
 
 
 
 
+<<<<<<< HEAD
 conn.commit()
+=======
+conn.commit()
+
+
+>>>>>>> 1b5ab69001ce3ff0a2f76e01953b2b206e90d792
