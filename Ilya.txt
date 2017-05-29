@@ -1,1 +1,39 @@
-hfewrhuifhremfghrwkeuioszyilrreiow;shtlkjwreilj4l3kwjt;lkjq453iopt;o
+import json
+import  requests
+import sqlite3
+import urllib2
+
+conn = sqlite3.connect('Chinook_Sqlite.sqlite')
+cursor = conn.cursor()
+cursor.execute( '''CREATE TABLE inf(name auto_increment primary key, data, photo,author)''')
+
+class Novosti:
+    name = ''
+    data = ''
+    photo = ''
+    author = ''
+
+    def __init__(self,name , data, photo,author):
+        self.name = name
+        self.data = data
+        self.photo = photo
+        self.author = author
+
+
+def  inf  ( url ):
+    data  = urllib2.urlopen(url).read()
+    soup = bs4.BeautifulSoup(data, 'html.parser')
+
+    c = Novosti( soup.title , , ,  )
+    cursor.execute(" insert into information values (%s, '%s', '%s', '%s');" %(answer.name, answer.data, answer.photo, answer.author)))
+
+l = ''
+for i in range(10):
+    l.append(input())
+    inf(l)
+
+
+
+
+
+conn.commit()
