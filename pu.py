@@ -28,7 +28,8 @@ def  info  ( url ):
     cursor.execute(" insert into inf values ('%s', '%s', '%s', '%s');" %(answer.name, answer.data, answer.photo, answer.author))
 
 for i in range(10):
-    info(input())
+    l = input()
+    info(l)
 
 
 
