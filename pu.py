@@ -5,7 +5,7 @@ import urllib2
 
 conn = sqlite3.connect('Chinook_Sqlite.sqlite')
 cursor = conn.cursor()
-
+cursor.execute( '''CREATE TABLE inf(name auto_increment primary key, data, photo,author)''')
 
 class Novosti:
     name = ''
